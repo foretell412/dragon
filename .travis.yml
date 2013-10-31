@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: CyylYp4hHNdTEml+TPo2dDcDiUgyTthTzgGNZF3SkysSVg4angS3w2Y0DzHyNBkCMJtX1fPbx8AwToqxDXfocrFyE1IfdXkuP0yU6z6A/uPEfI3617aK2y4uOetJzjuwnUHErFUO4G8Iw0GvISETUdgbU2bzsoGtP0tD9akGr7k=
+  app: gory-harbor-4537
+  on:
+    repo: foretell412/dragon
+  run: "rake db:migrate"
